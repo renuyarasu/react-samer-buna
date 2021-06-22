@@ -32,3 +32,10 @@ form {
   display: flex;
   justify-content: center;
 }
+button {
+  background-color: crimson;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
