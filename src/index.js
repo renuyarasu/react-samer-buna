@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Card from './components/Card';
+import ConditionalStyles from './components/ConditionalStyles';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -10,6 +11,7 @@ ReactDOM.render(
 
     <App />
     <Card />
+    {/* <ConditionalStyles /> */}
 
   </React.StrictMode>,
   document.getElementById('root')

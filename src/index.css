@@ -1,7 +1,8 @@
+
 #root {
   max-width: 800px;
   position: absolute;
-  top: 10%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -9,4 +10,18 @@
 
 button {
   padding: 20px;
+}
+.github-profile img {
+  float: left;
+  display: inline-block;
+  width: 75px;
+}
+.info {
+  display: inline-block;
+  margin-left: 12px;
+}
+.name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
 }
