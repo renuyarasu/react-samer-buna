@@ -14,13 +14,18 @@ class App extends React.Component {
   state = {
     profiles: testData,
   };
+  addNewProfile = (profileData) => {
+    this.setState(prevState => ({
+      profiles: { ...prevState.profiles, profileData}
+    }))
+  }
   render() {
     return (
       <div className="App">
         <h1 style={{ color: Math.random() < 0.5 ? "darkcyan" : "crimson" }}>
           The GiHub Cards App
         </h1>
-        <Form />
+        <Form onSubmit={this.addNewProfile} />
         <CardList profiles={this.state.profiles} />
       </div>
 
