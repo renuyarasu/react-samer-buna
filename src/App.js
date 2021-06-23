@@ -1,13 +1,24 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
 import Form from "./components/Form";
 import CardList from "./components/CardList";
 
-
 const testData = [
-  { name: "Dan Abramov", avatar_url: "https://avatars.githubusercontent.com/u/1", company: "innRoad" },
-  { name: "Sophie Alpert", avatar_url: "https://avatars.githubusercontent.com/u/3", company: "innRoad" },
-  { name: "Sebastian Markbåge", avatar_url: "https://avatars.githubusercontent.com/u/7", company: "Facebook" },
+  {
+    name: "Dan Abramov",
+    avatar_url: "https://avatars.githubusercontent.com/u/1",
+    company: "innRoad",
+  },
+  {
+    name: "Sophie Alpert",
+    avatar_url: "https://avatars.githubusercontent.com/u/3",
+    company: "innRoad",
+  },
+  {
+    name: "Sebastian Markbåge",
+    avatar_url: "https://avatars.githubusercontent.com/u/7",
+    company: "Facebook",
+  },
 ];
 
 class App extends React.Component {
@@ -15,10 +26,10 @@ class App extends React.Component {
     profiles: testData,
   };
   addNewProfile = (profileData) => {
-    this.setState(prevState => ({
-      profiles: { ...prevState.profiles, profileData}
-    }))
-  }
+    this.setState((prevState) => ({
+      profiles: [...prevState.profiles, profileData],
+    }));
+  };
   render() {
     return (
       <div className="App">
@@ -28,10 +39,8 @@ class App extends React.Component {
         <Form onSubmit={this.addNewProfile} />
         <CardList profiles={this.state.profiles} />
       </div>
-
     );
   }
 }
 
 export default App;
-
